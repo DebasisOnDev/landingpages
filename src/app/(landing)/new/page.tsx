@@ -9,7 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 import NewHoverCard from "@/components/custom/3d/NewHoverCard";
 import { PinContainer } from "@/components/custom/3d/ThreeDPin";
-import GridBox from "@/components/custom/grid/GridBox";
 
 const page = () => {
   return (

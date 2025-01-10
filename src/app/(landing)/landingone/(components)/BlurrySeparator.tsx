@@ -11,6 +11,7 @@ interface BlurrySeparatorProps {
 export default function BlurrySeparator({
   topComponent,
   bottomComponent,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   topBg = "bg-sky-50",
   bottomBg = "bg-white",
   blendHeight = 100,
@@ -27,6 +28,7 @@ export default function BlurrySeparator({
               background: `linear-gradient(to bottom, transparent, var(--blend-bottom-color))`,
               "--blend-bottom-color":
                 bottomBg === "bg-white" ? "white" : "rgb(var(--background))",
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
             } as any
           }
         />
