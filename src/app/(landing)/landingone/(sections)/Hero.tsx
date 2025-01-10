@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useRef } from "react";

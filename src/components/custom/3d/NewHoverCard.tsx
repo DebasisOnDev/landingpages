@@ -44,6 +44,7 @@ const NewHoverCard = () => {
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { left, top, width, height } = ref.current.getBoundingClientRect();
     setPosition({ x: e.clientX - left, y: e.clientY - top });
   };
@@ -54,6 +55,7 @@ const NewHoverCard = () => {
     handleMouseMove(e);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
     setIsMouseEntered(false);
