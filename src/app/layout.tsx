@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Asap, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
+});
+
+const asap = Asap({
+  variable: "--font-asap",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  // weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable}  antialiased`}>{children}</body>
+      <body
+        className={`${openSans.variable} ${asap.className} ${montserrat.variable}  antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

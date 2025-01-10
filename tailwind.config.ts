@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-// eslint-disable-next-line @typescript-eslint/no-require-imports
 
 const {
   default: flattenColorPalette,
@@ -24,6 +23,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        asap: ["var(--font-asap)"],
+        montserrat: ["var(--font-montserrat)"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -65,6 +68,9 @@ const config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        "ltwo-orange": "#FF2C26",
+        "ltwo-white": "#FFFFFF",
+        "ltwo-black": "#0B1117",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -111,6 +117,7 @@ const config = {
   plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function addVariablesForColors({ addBase, theme }: any) {
   const allColors = flattenColorPalette(theme("colors"));
   const newVars = Object.fromEntries(
